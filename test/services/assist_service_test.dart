@@ -18,15 +18,16 @@ void main() {
 
   setUp(() async {
     provider = MockAssistProviderInterface();
-    service = AssistService(provider);
+    service = AssistService(assistProvider: provider);
 
     String json = File('${Directory.current.path}/test/resources/assist_response.json').readAsStringSync();
-    when(provider.getAssists()).thenAnswer((_) async => 
+    when(provider.getAssists()).thenAnswer((_) async =>
       Future.sync(() => Response(statusCode: HttpStatus.ok, body: jsonDecode(json))));
   });
 
   test('Testando o retorno com sucesso', () async {
     List<Assist> retorno = await service.getAssists();
     expect(retorno.length, 6);
+    expect(retorno[0].id, 1);
   });
 }

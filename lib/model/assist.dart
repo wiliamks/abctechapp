@@ -1,7 +1,11 @@
 import 'dart:convert';
 
 class Assist {
-  Assist({required this.id, required this.name, required this.description});
+  Assist({
+      required this.id,
+      required this.name,
+      required this.description,
+  });
 
   int id;
   String name;
@@ -32,11 +36,10 @@ class Assist {
       'Assistance(id: $id, name: $name, description: $description)';
 
   @override
-  bool operator ==(Object other) {
+  bool operator ==(covariant Assist other) {
     if (identical(this, other)) return true;
 
-    return other is Assist &&
-        other.id == id &&
+    return other.id == id &&
         other.name == name &&
         other.description == description;
   }

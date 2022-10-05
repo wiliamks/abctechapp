@@ -12,7 +12,7 @@ void main() {
 }
 
 void initServices() async {
-  Get.lazyPut(() => AssistService(AssistProvider()));
+  Get.lazyPut(() => AssistService(assistProvider: AssistProvider()));
 }
 
 class MyApp extends StatelessWidget {
@@ -23,7 +23,9 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'ABC Tech',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.red,
+        textTheme:
+            const TextTheme(headlineMedium: TextStyle(color: Colors.yellow))
       ),
       getPages: [
         GetPage(name: "/", page: () => const HomePage(), binding: HomeBind())

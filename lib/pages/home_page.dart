@@ -36,8 +36,9 @@ class HomePage extends GetView<AssistController> {
               children: [
                 Expanded(
                     child: TextButton(
-                  child: const Text('Recarregar'),
                   onPressed: controller.getAssistList,
+                  child: const Text('Recarregar'),
+
                 ))
               ],
             ),
