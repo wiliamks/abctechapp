@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       getPages: [
-        GetPage(name: "/", page: () => const HomePage(), binding: HomeBind())
+        GetPage(name: '/', page: () => const HomePage(), binding: HomeBind())
       ]
     );
   }

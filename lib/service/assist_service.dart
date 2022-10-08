@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class AssistService extends GetxService {
-  late AssistProviderInterface _assistProvider;
+  late final AssistProviderInterface _assistProvider;
 
   AssistService(this._assistProvider);
 
@@ -12,7 +12,7 @@ class AssistService extends GetxService {
     Response response = await _assistProvider.getAssists();
 
     if (response.hasError) {
-      return Future.error(ErrorDescription("Erro na conexão"));
+      return Future.error(ErrorDescription('Erro na conexão'));
     }
 
     try {
