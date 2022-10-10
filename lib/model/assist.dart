@@ -21,12 +21,10 @@ class Assist {
 
   String toJson() => json.encode(toMap());
 
-  factory Assist.fromMap(Map<String, dynamic> map) {
-    return Assist(
-        id: map['id'] as int,
-        name: map['name'] as String,
-        description: map['description'] as String);
-  }
+  factory Assist.fromMap(Map<String, dynamic> map) => Assist(
+      id: map['id'] as int,
+      name: map['name'] as String,
+      description: map['description'] as String);
 
   factory Assist.fromJson(String source) =>
       Assist.fromMap(json.decode(source) as Map<String, dynamic>);

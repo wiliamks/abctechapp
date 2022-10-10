@@ -17,7 +17,7 @@ class HomePage extends GetView<AssistController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Lista de serviços")),
+      appBar: AppBar(title: const Text('Lista de serviços')),
       body: Container(
         constraints: const BoxConstraints.expand(),
         child: Column(
@@ -27,7 +27,7 @@ class HomePage extends GetView<AssistController> {
               children: const [
                 Expanded(
                     child: Text(
-                  "Os serviços disponíveis são:",
+                  'Os serviços disponíveis são:',
                   textAlign: TextAlign.center,
                 ))
               ],
@@ -38,7 +38,10 @@ class HomePage extends GetView<AssistController> {
                     child: TextButton(
                   onPressed: controller.getAssistList,
                   child: const Text('Recarregar'),
+<<<<<<< HEAD
 
+=======
+>>>>>>> 23fa86ea681472ee011597fb03333994fa3b0144
                 ))
               ],
             ),

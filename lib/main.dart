@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
             const TextTheme(headlineMedium: TextStyle(color: Colors.yellow))
       ),
       getPages: [
-        GetPage(name: "/", page: () => const HomePage(), binding: HomeBind())
+        GetPage(name: '/', page: () => const HomePage(), binding: HomeBind())
       ]
     );
   }
