@@ -1,11 +1,7 @@
 import 'dart:convert';
 
 class Assist {
-  Assist({
-      required this.id,
-      required this.name,
-      required this.description,
-  });
+  Assist({required this.id, required this.name, required this.description });
 
   int id;
   String name;
