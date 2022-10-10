@@ -4,11 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class AssistService extends GetxService {
-<<<<<<< HEAD
   late AssistProviderInterface assistProvider;
-=======
-  late final AssistProviderInterface _assistProvider;
->>>>>>> 23fa86ea681472ee011597fb03333994fa3b0144
 
   AssistService({required this.assistProvider});
 
