@@ -22,6 +22,8 @@ jobs:
     - run: flutter pub get
     - run: flutter analyze
     - run: flutter test
+    - name: Release to github pages
+      uses: erickzanardo/flutter-gh-pages@v7
     - run: flutter build apk --debug
     - name: Create a Release APK
       uses: ncipollo/release-action@v1
