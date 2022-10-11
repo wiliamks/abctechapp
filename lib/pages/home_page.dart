@@ -38,10 +38,6 @@ class HomePage extends GetView<AssistController> {
                     child: TextButton(
                   onPressed: controller.getAssistList,
                   child: const Text('Recarregar'),
-<<<<<<< HEAD
-
-=======
->>>>>>> 23fa86ea681472ee011597fb03333994fa3b0144
                 ))
               ],
             ),
