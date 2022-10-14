@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 class OrderLocation {
   double latitude;
   double longitude;
