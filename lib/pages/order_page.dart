@@ -35,7 +35,7 @@ class OrderPage extends GetView<OrderController> {
               inputFormatters: [FilteringTextInputFormatter.digitsOnly],
               keyboardType: TextInputType.number,
               decoration:
-                  const InputDecoration(labelText: "Código do prestador"),
+                  const InputDecoration(labelText: 'Código do prestador'),
               textAlign: TextAlign.center,
             ),
             Row(children: [
@@ -51,14 +51,14 @@ class OrderPage extends GetView<OrderController> {
               Ink(
                   decoration: const ShapeDecoration(
                       shape: CircleBorder(), color: Colors.blueAccent),
+                  width: 40,
+                  height: 40,
                   child: IconButton(
                       icon: const Icon(
                         Icons.search,
                         color: Colors.white,
                       ),
-                      onPressed: () => controller.editAssists()),
-                  width: 40,
-                  height: 40)
+                      onPressed: () => controller.editAssists()))
             ]),
             Obx(
               () => renderAssists(controller.selectedAssists),
