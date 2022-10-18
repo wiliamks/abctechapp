@@ -1,5 +1,7 @@
 import 'package:abctechapp/pages/home_bind.dart';
 import 'package:abctechapp/pages/home_page.dart';
+import 'package:abctechapp/pages/login_bind.dart';
+import 'package:abctechapp/pages/login_page.dart';
 import 'package:abctechapp/pages/order_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -30,7 +32,8 @@ class MyApp extends StatelessWidget {
             const TextTheme(headlineMedium: TextStyle(color: Colors.yellow))
       ),
       getPages: [
-        GetPage(name: '/', page: () => const OrderPage(), binding: OrderBind()),
+        GetPage(name: '/', page: () => const LoginPage(), binding: LoginBind()),
+        GetPage(name: '/order', page: () => const OrderPage(), binding: OrderBind()),
         GetPage(name: '/assists', page: () => const HomePage(), binding: HomeBind())
       ]
     );
