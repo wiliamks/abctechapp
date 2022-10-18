@@ -1,7 +1,6 @@
 import 'package:abctechapp/controller/order_controller.dart';
 import 'package:abctechapp/model/assist.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 
 class OrderPage extends GetView<OrderController> {
@@ -27,14 +26,6 @@ class OrderPage extends GetView<OrderController> {
                   style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ))
               ]),
-              TextFormField(
-                controller: controller.operatorIdController,
-                inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-                keyboardType: TextInputType.number,
-                decoration:
-                    const InputDecoration(labelText: 'Código do prestador'),
-                textAlign: TextAlign.center,
-              ),
               Row(children: [
                 const Expanded(
                     child: Padding(

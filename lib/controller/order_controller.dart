@@ -1,3 +1,4 @@
+import 'package:abctechapp/logged_user.dart';
 import 'package:abctechapp/model/assist.dart';
 import 'package:abctechapp/model/order.dart';
 import 'package:abctechapp/model/order_created.dart';
@@ -39,16 +40,18 @@ class OrderController extends GetxController with StateMixin<OrderCreated> {
   finishStartOrder() {
     switch (screenState.value) {
       case OrderState.creating:
+        change(null, status: RxStatus.loading());
         _geolocationService.getPosition().then((value) {
           var start = orderLocationFromPosition(value);
 
           _order = Order(
-              operatorId: int.parse(operatorIdController.text),
+              operatorId: LoggedUser.get()?.id ?? 0,
               assists: servicesIdArrayFromServices(),
               start: start,
               end: null);
+          screenState.value = OrderState.started;
+          change(null, status: RxStatus.success());
         });
-        screenState.value = OrderState.started;
         break;
       case OrderState.started:
         change(null, status: RxStatus.loading());
