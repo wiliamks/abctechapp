@@ -12,12 +12,6 @@ class LoginController extends GetxController with StateMixin<User> {
 
   LoginController(this._service);
 
-  @override
-  void onReady() {
-    super.onReady();
-    //user = Get.arguments;
-  }
-
   void login() async {
     change(null, status: RxStatus.loading());
     try {
@@ -27,13 +21,5 @@ class LoginController extends GetxController with StateMixin<User> {
     } catch (error) {
       change(null, status: RxStatus.error(error.toString()));
     }
-    // _service
-    //     .signIn(Login(input: input.text, password: password.text))
-    //     .then((value) {
-    //   LoggedUser.setUser(value);
-    //   change(value, status: RxStatus.success());
-    // }).onError((error, stackTrace) {
-    //   change(null, status: RxStatus.error(error.toString()));
-    // });
   }
 }
