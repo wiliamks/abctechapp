@@ -1,4 +1,3 @@
-import 'package:abctechapp/logged_user.dart';
 import 'package:abctechapp/model/assist.dart';
 import 'package:abctechapp/model/order.dart';
 import 'package:abctechapp/model/order_created.dart';
@@ -45,7 +44,6 @@ class OrderController extends GetxController with StateMixin<OrderCreated> {
           var start = orderLocationFromPosition(value);
 
           _order = Order(
-              operatorId: LoggedUser.get()?.id ?? 0,
               assists: servicesIdArrayFromServices(),
               start: start,
               end: null);
