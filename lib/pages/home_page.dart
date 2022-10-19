@@ -41,15 +41,6 @@ class HomePage extends GetView<AssistController> {
                           )))
                 ],
               ),
-              Row(
-                children: [
-                  Expanded(
-                      child: TextButton(
-                    onPressed: controller.getAssistList,
-                    child: const Text('Recarregar'),
-                  ))
-                ],
-              ),
               controller.obx((state) => renderAssist(state ?? []),
                   onEmpty: const Text('Nenhuma assistência disponível'),
                   onError: (error) => Text(error.toString())),

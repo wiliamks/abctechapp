@@ -8,7 +8,7 @@ import 'package:get/get.dart';
 
 class OrderProviderImpl extends GetConnect implements OrderProvider {
   @override
-  Future<Response> portOrder(Order order) =>
-      post('${Constants.url}/api/order', order.toMap(),
-          headers: {HttpHeaders.cookieHeader: LoggedUser.getToken() ?? ''});
+  Future<Response> portOrder(Order order) => post(
+      '${Constants.url}/api/order', order.toMap(),
+      headers: {HttpHeaders.authorizationHeader: LoggedUser.getToken() ?? ''});
 }

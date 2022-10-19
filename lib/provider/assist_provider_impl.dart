@@ -8,5 +8,5 @@ import 'package:get/get_connect.dart';
 class AssistProvider extends GetConnect implements AssistProviderInterface {
   @override
   Future<Response> getAssists() => get('${Constants.url}/api/assistance',
-      headers: {HttpHeaders.cookieHeader: LoggedUser.getToken() ?? ''});
+      headers: {HttpHeaders.authorizationHeader: LoggedUser.getToken() ?? ''});
 }

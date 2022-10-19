@@ -75,7 +75,7 @@ class OrderPage extends GetView<OrderController> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Teste'),
+          title: const Text('Ordem'),
         ),
         body: Container(
             constraints: const BoxConstraints.expand(),
