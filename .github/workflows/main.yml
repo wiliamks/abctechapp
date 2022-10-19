@@ -27,7 +27,7 @@ jobs:
       uses: erickzanardo/flutter-gh-pages@v7
       with:
         baseHref: /abctechapp/
-    - run: flutter build apk --debug
+    - run: flutter build apk --release
     - name: Create a Release APK
       uses: ncipollo/release-action@v1
       with:
