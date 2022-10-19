@@ -12,6 +12,12 @@ class LoginController extends GetxController with StateMixin<User> {
 
   LoginController(this._service);
 
+  @override
+  void onInit() {
+    super.onInit();
+    change(null, status: RxStatus.success());
+  }
+
   void login() async {
     change(null, status: RxStatus.loading());
     try {

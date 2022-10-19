@@ -8,7 +8,7 @@ class LoggedUser {
     _user = user;
   }
 
-  static void setToken(String token) {
+  static void setToken(String? token) {
     _token = token;
   }
 

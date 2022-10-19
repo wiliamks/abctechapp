@@ -19,12 +19,9 @@ class LoginService extends GetxService {
     }
 
     try {
-      var cookie = response.headers?[HttpHeaders.setCookieHeader];
-      if (cookie != null) {
-        LoggedUser.setToken(cookie);
-      }
       User result = User.fromMap(response.body);
       LoggedUser.setUser(result);
+      LoggedUser.setToken(result.token);
       return Future.sync(() => result);
     } catch (e) {
       e.printError();
