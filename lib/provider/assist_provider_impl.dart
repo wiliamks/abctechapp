@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'dart:io';
 
 import 'package:abctechapp/constants.dart';
@@ -8,11 +7,6 @@ import 'package:get/get_connect.dart';
 
 class AssistProvider extends GetConnect implements AssistProviderInterface {
   @override
-  Future<Response> getAssists() {
-    String? token = LoggedUser.getToken();
-    log('Token: $token');
-    return get('${Constants.url}/api/assistance', headers: {
-      HttpHeaders.authorizationHeader: token ?? ''
-    });
-  }
+  Future<Response> getAssists() => get('${Constants.url}/api/assistance',
+      headers: {HttpHeaders.authorizationHeader: LoggedUser.getToken() ?? ''});
 }
