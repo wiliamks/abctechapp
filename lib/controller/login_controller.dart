@@ -3,10 +3,10 @@ import 'package:get/get.dart';
 
 import 'package:abctechapp/model/login.dart';
 import 'package:abctechapp/model/user.dart';
-import 'package:abctechapp/service/login_service.dart';
+import 'package:abctechapp/service/login_service_impl.dart';
 
 class LoginController extends GetxController with StateMixin<User> {
-  late final LoginService _service;
+  late final LoginServiceImpl _service;
   final input = TextEditingController();
   final password = TextEditingController();
 
@@ -26,6 +26,7 @@ class LoginController extends GetxController with StateMixin<User> {
       Get.toNamed('/order');
     } catch (error) {
       change(null, status: RxStatus.error(error.toString()));
+      Get.snackbar('Erro', error.toString());
     }
   }
 }

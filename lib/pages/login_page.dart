@@ -122,6 +122,7 @@ class LoginPage extends GetView<LoginController> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-            child: controller.obx((state) => buildForm())));
+            child: controller.obx((state) => buildForm(),
+                onError: (error) => buildForm())));
   }
 }
