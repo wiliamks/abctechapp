@@ -3,8 +3,8 @@ import 'package:abctechapp/model/assist.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class HomePage extends GetView<AssistController> {
-  const HomePage({super.key});
+class AssistPage extends GetView<AssistController> {
+  const AssistPage({super.key});
 
   Widget renderAssist(List<Assist> list) {
     return ListView.builder(

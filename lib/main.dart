@@ -1,5 +1,5 @@
-import 'package:abctechapp/pages/home_bind.dart';
-import 'package:abctechapp/pages/home_page.dart';
+import 'package:abctechapp/pages/assist_page.dart';
+import 'package:abctechapp/pages/assist_bind.dart';
 import 'package:abctechapp/pages/login_bind.dart';
 import 'package:abctechapp/pages/login_page.dart';
 import 'package:abctechapp/pages/order_page.dart';
@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
       getPages: [
         GetPage(name: '/', page: () => const LoginPage(), binding: LoginBind()),
         GetPage(name: '/order', page: () => const OrderPage(), binding: OrderBind()),
-        GetPage(name: '/assists', page: () => const HomePage(), binding: HomeBind())
+        GetPage(name: '/assists', page: () => const AssistPage(), binding: AssistBind())
       ]
     );
   }

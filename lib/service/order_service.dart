@@ -1,3 +1,5 @@
+import 'package:abctechapp/constants.dart';
+import 'package:abctechapp/model/error_response.dart';
 import 'package:abctechapp/model/order.dart';
 import 'package:abctechapp/model/order_created.dart';
 import 'package:abctechapp/provider/order_provider.dart';
@@ -12,7 +14,14 @@ class OrderService extends GetxService {
   Future<OrderCreated> createOrder(Order order) async {
     Response response = await _provider.portOrder(order);
     if (response.hasError) {
-      return Future.error(ErrorDescription('Erro na conexão'));
+      try {
+        ErrorResponse error = ErrorResponse.fromMap(response.body);
+        return Future.error(ErrorDescription(error.description != null
+            ? error.description!
+            : Constants.genericError));
+      } catch (e) {
+        return Future.error(ErrorDescription(Constants.genericError));
+      }
     }
 
     try {
