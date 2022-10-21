@@ -3,7 +3,7 @@ on:
     branches:
       - main
 
-name: Test and Analyze
+name: CI
 jobs:
   build:
     name: Build APK

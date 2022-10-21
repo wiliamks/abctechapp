@@ -1,16 +1,5 @@
-# abctechapp
+# abctechapp [![Build Status](https://github.com/wiliamks/abctechapp/actions/workflows/main.yml/badge.svg)](https://github.com/wiliamks/abctechapp/actions/workflows/main.yml)
+Solution Sprint da Fase 3 do MBA em Engenharia de Software na FIAP.
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Web: [https://wiliamks.github.io/abctechapp/](https://wiliamks.github.io/abctechapp/)
+Apk: [Release](https://github.com/wiliamks/abctechapp/releases/latest)
